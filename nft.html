@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nft</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#001836] flex h-screen justify-center items-center">
+    <div
+      class="container w-[300px] h-[500px] bg-[#14273F] p-5 rounded-xl relative"
+    >
+      <div
+        class="w-[260px] h-[260px] rounded-lg mb-3 absolute bg-[#28FEFF7F] justify-center items-center hidden"
+        id="toShadow"
+      >
+        <img src="images/icon-view.svg" alt="eye" class="" />
+      </div>
+      <img
+        src="images/image-equilibrium.jpg"
+        alt="equilibrium"
+        class="rounded-lg mb-3"
+        id="toHover"
+      />
+
+      <h2 class="text-white mb-3 hover:text-[#28FEFF] hover:cursor-pointer">
+        Equilibrium #3429
+      </h2>
+      <p class="text-[#778EAE] mb-3">
+        Our Equilibrium collection promotes balance and
+      </p>
+      <div
+        class="flexitems flex justify-between pb-3 border-b-[1px] border-[#25384F]"
+      >
+        <p class="text-[#28FEFF]">
+          <img src="images/icon-ethereum.svg" class="inline" alt="ethereum" />
+          0.041 ETH
+        </p>
+        <p class="text-[#778EAE]">
+          <img src="images/icon-clock.svg" class="inline" alt="clock" /> 3 days
+          left
+        </p>
+      </div>
+      <div class="inlineitems mt-3">
+        <img
+          src="images/image-avatar.png"
+          alt="avatar"
+          class="inline w-[30px] border-[1px] rounded-full mr-2"
+        />
+        <p class="inline text-[#778EAE] text-xs">Creation of</p>
+        <a href="#" class="inline text-white text-xs hover:text-[#28FEFF]"
+          >Jules Wyvern</a
+        >
+      </div>
+    </div>
+    <script>
+      var toShow = document.getElementById("toShadow");
+      var toHover = document.getElementById("toHover");
+      console.log(toShow);
+      console.log(toHover);
+      toHover.addEventListener("mouseover", function () {
+        console.log("hi");
+        toShow.classList.remove("hidden");
+        toShow.classList.add("flex");
+      });
+      toHover.addEventListener("mouseout", function () {
+        console.log("hi");
+        toShow.classList.add("hidden");
+        toShow.classList.remove("flex");
+      });
+    </script>
+  </body>
+</html>
